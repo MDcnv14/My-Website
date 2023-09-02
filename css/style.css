@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900&display=swap");
+:root{
+  --trasition: .5s;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Cairo", sans-serif;
+}
+/* Start Header */
+header {
+  background-color: #96816c;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header h1 {
+  margin: 15px;
+}
+header h1 a {
+  color: black;
+  text-decoration: none;
+  transition: var(--trasition);
+}
+header h1 a:hover{
+  color: #eee;
+}
+header nav {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+header nav li {
+  margin: 15px;
+}
+header nav li a {
+  color: black;
+  text-decoration: none;
+  transition: var(--trasition);
+}
+header nav li a:hover{
+  color: #eee;
+}
+/* End Header */
+/* Start Main Section */
+.main-sec {
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  background-color: #706254;
+}
+.main-sec h2 span {
+  font-size: 50px;
+  margin: 25px 50px;
+  color: black;
+}
+.main-sec .social-icons {
+  position: absolute;
+  top: 525px;
+}
+.main-sec .social-icons i {
+  font-size: 25px;
+  color: black;
+  transition: .5s;
+}
+.main-sec .social-icons i:hover {
+  color: #eee;
+}
+/* End Main Section */
