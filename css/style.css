@@ -1,6 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900&display=swap");
-:root{
-  --trasition: .5s;
+:root {
+  --trasition: 0.5s;
+  --main-color: #706254;
+  --main-color2: #96816c;
+  --hover-color: #eee;
 }
 * {
   margin: 0;
@@ -10,9 +13,28 @@
 body {
   font-family: "Cairo", sans-serif;
 }
+#animation {
+  width: 100%;
+  height: 100%;
+  background-color: var(--main-color);
+  position: fixed;
+  z-index: 99999;
+}
+#animation div {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  position: relative;
+  top: 40%;
+  left: 40%;
+  border: 19px solid var(--main-color2);
+  border-left-color: transparent;
+  border-right-color: transparent;
+  animation: loading 2.5s infinite linear;
+}
 /* Start Header */
 header {
-  background-color: #96816c;
+  background-color: var(--main-color2);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -25,7 +47,7 @@ header h1 a {
   text-decoration: none;
   transition: var(--trasition);
 }
-header h1 a:hover{
+header h1 a:hover {
   color: #eee;
 }
 header nav {
@@ -41,8 +63,8 @@ header nav li a {
   text-decoration: none;
   transition: var(--trasition);
 }
-header nav li a:hover{
-  color: #eee;
+header nav li a:hover {
+  color: var(--hover-color);
 }
 /* End Header */
 /* Start Main Section */
@@ -51,7 +73,7 @@ header nav li a:hover{
   display: flex;
   align-items: center;
   padding: 20px;
-  background-color: #706254;
+  background-color: var(--main-color);
 }
 .main-sec h2 span {
   font-size: 50px;
@@ -65,9 +87,18 @@ header nav li a:hover{
 .main-sec .social-icons i {
   font-size: 25px;
   color: black;
-  transition: .5s;
+  transition: 0.5s;
 }
 .main-sec .social-icons i:hover {
   color: #eee;
 }
 /* End Main Section */
+/* Animations */
+@keyframes loading {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
